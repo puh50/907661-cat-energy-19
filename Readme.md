@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Андрей Гапоненко](https://up.htmlacademy.ru/adaptive/19/user/907661).
-* Наставник: `Неизвестно`.
+* Наставник: [Семен Якушев](https://htmlacademy.ru/profile/id1118791).
 
 ---
 
