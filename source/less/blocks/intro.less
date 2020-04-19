@@ -7,7 +7,10 @@
 }
 
 .intro__block-above {
-  margin-top: -205px;
+  position: relative;
+
+  padding: 0 20px 60px 20px;
+  margin-top: -278px;
 }
 
 .intro__text {
@@ -31,4 +34,141 @@
 
   margin: 0;
   margin-bottom: 28px;
+}
+
+.intro__image {
+  text-align: center;
+}
+
+.intro__link {
+  width: 280px;
+
+  padding: 16px;
+  margin-bottom: 23px;
+  margin-left: 20px;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  font-size: 14px;
+  line-height: 18px;
+
+  text-decoration: none;
+}
+
+@media (min-width: @tablet-width) {
+  .intro__background-block {
+    display: none;
+  }
+
+  .intro__block-above {
+    position: relative;
+
+    padding: 46px 0 0 0;
+    margin: 0;
+  }
+
+  .intro__text {
+    color: @title-color;
+    text-align: left;
+
+    padding: 0 118px;
+
+    z-index: 2;
+  }
+
+  .intro__title {
+    font-size: 60px;
+    line-height: 60px;
+
+    margin-bottom: 41px;
+  }
+
+  .intro__slogan {
+    margin-bottom: 48px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .intro__image {
+    margin-top: -81px;
+
+    position: relative;
+    right: -15px;
+
+    z-index: -1;
+  }
+
+  .intro__picture {
+    width: 630px;
+    height: 607px;
+    padding-left: 50px;
+  }
+
+  .intro__link {
+    width: 245px;
+
+    margin-bottom: 0;
+    margin-left: 0;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    position: static;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .intro {
+    display: flex;
+
+    margin-bottom: 80px;
+  }
+
+  .intro__background-block {
+    display: block;
+
+    min-width: 720px;
+    min-height: 696px;
+
+    background-image: url("../../img/index-background-desktop@1x.jpg");
+    background-color: #68b738;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    order: 2;
+  }
+
+  .intro__block-above {
+    position: relative;
+
+    padding: 150px 0 0 0;
+  }
+
+  .intro__text {
+    padding: 0 117px;
+    padding-right: 100px;
+    margin: 73px 0 0 74px;
+  }
+
+  .intro__slogan {
+    margin-bottom: 52px;
+  }
+
+  .intro__image {
+    position: absolute;
+    right: -416px;
+    top: 244px;
+
+    z-index: 0;
+  }
+
+  .intro__picture {
+    width: 552px;
+    height: 499px;
+
+    padding: 0;
+  }
 }
