@@ -1,19 +1,30 @@
 .button {
-  font-size: 16px;
-  line-height: 20px;
-
   width: 100%;
+
   display: block;
 
-  padding: 13px 0;
+  padding: 10px;
 
-  background-color: @bg-button;
-  color: @button-color;
+  background-color: @primary-color;
+  color: #ffffff;
 
   border: none;
   box-shadow: none;
+  box-sizing: border-box;
+
+  font-size: 16px;
+  line-height: 20px;
 
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+@media (min-width: @tablet-width) {
+  .button--inline-block {
+    display: inline-block;
+    vertical-align: middle;
+
+    width: initial;
+  }
 }

@@ -3,7 +3,74 @@
   justify-content: space-between;
   align-items: center;
 
-  min-height: 65px;
   padding: 11px 19px 15px 20px;
   box-sizing: border-box;
+}
+
+.page-header__logo-image {
+  width: 191px;
+  height: 38px;
+}
+
+// for catalog.html
+
+.page-header__menu-header-block--catalog-underline {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__menu-button {
+    display: none;
+  }
+
+  .page-header {
+    min-height: 60px;
+
+    padding: 0 30px;
+    margin-top: 10px;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .page-header__menu-header-block {
+    padding: 0;
+    margin-right: 30px;
+  }
+
+  .page-header__logo-image {
+    width: 241px;
+    height: 59px;
+  }
+
+  // for catalog.html
+
+  .page-header__menu-header-block--catalog-underline {
+    border-bottom: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    min-width: @desktop-width;
+
+    box-sizing: border-box;
+
+    padding: 0 40px;
+    margin-top: 42px;
+
+    position: absolute;
+
+    z-index: 2;
+  }
+
+  .page-header__logo-image {
+    width: 249px;
+    height: 60px;
+  }
+
+  .page-header--catalog-position {
+    position: static;
+  }
 }
