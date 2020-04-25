@@ -5,6 +5,8 @@
   text-align: center;
 
   text-transform: uppercase;
+
+  // display: none;
 }
 
 .main-navigation__list {
@@ -71,19 +73,18 @@
   }
 
   .main-navigation__item-link {
-    color: #ffffff;
-  }
-
-  .main-navigation__item-link--catalog-color {
-    color: #111111;
+    color: @primary-text-color;
   }
 
   .main-navigation__item-link--current {
     padding-bottom: 5px;
-    border-bottom: 2px solid #ffffff;
   }
 
-  .main-navigation__item-link--catalog-current {
-    border-bottom-color: @primary-color;
+  .main-navigation__item-link--main-page {
+    color: #ffffff;
+  }
+
+  .main-navigation__item-link--main-page-current {
+    border-bottom-color: #ffffff;
   }
 }
