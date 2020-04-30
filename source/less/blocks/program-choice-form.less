@@ -13,6 +13,10 @@
   border: none;
 }
 
+.program-choice-form__fieldset label {
+  cursor: pointer;
+}
+
 .program-choice-form__fieldset--pet-data {
   margin-bottom: 10px;
 }
@@ -41,7 +45,7 @@
 
 .program-choice-form__fieldset--program {
   padding: 0 19px;
-  padding-top: 25px;
+  padding-top: 18px;
   padding-bottom: 17px;
   margin: 0 -20px;
   margin-bottom: 42px;
@@ -61,8 +65,8 @@
 }
 
 .program-choice-form__program-item label {
-  padding-left: 45px;
-  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
 
   position: relative;
 }
@@ -72,11 +76,9 @@
   height: 30px;
   border-radius: 50%;
 
-  border: solid 1px #cdcdcd;
+  margin-right: 14px;
 
-  position: absolute;
-  top: -6px;
-  left: 0;
+  border: solid 1px #cdcdcd;
 }
 
 .program-choice-form__program-item input[type="radio"]:checked ~ .program-choice-form__radio-check {
@@ -87,13 +89,17 @@
   background-color: @primary-color;
 
   position: absolute;
-  top: 4px;
-  left: 10px;
+  top: 10px;
+  left: 11px;
 }
 
-.program-choice-form__program-item label:hover ~ .program-choice-form__radio,
-.program-choice-form__program-item label:focus ~ .program-choice-form__radio {
+.program-choice-form__program-item input[type="radio"]:hover + .program-choice-form__radio,
+.program-choice-form__program-item input[type="radio"]:focus + .program-choice-form__radio {
   border-color: #bababa;
+}
+
+.program-choice-form__program-item label:active {
+  opacity: 0.3;
 }
 
 .program-choice-form__fieldset--owner-data {
@@ -130,10 +136,23 @@
 
 .program-choice-form__owner-data-wrapper {
   width: 100%;
+
+  position: relative;
 }
 
 .program-choice-form__fieldset--owner-data input {
   width: 100%;
+}
+
+.program-choice-form__owner-input-icon {
+  position: absolute;
+  top: 14px;
+  right: 15px;
+}
+
+.program-choice-form__owner-input-icon--phone {
+  top: 12px;
+  right: 13px;
 }
 
 .program-choice-form__comment {
@@ -155,24 +174,59 @@
   border: 1px solid #e7e7e7;
 }
 
+.program-choice-form__comment textarea:focus {
+  border: 2px solid #444444;
+  outline: none;
+}
+
 .program-choice-form__additional legend {
-  margin-bottom: 35px;
+  margin-bottom: 34px;
 }
 
 .program-choice-form__additional-item {
-  margin-bottom: 12px;
-
-  display: flex;
-  align-items: center;
+  margin-bottom: 10px;
 }
 
 .program-choice-form__additional-item label {
-  padding-left: 16px;
+  display: flex;
+  align-items: center;
+
+  position: relative;
 }
 
-.program-choice-form__additional-item input[type="checkbox"] {
+.program-choice-form__check {
+  display: none;
+}
+
+.program-choice-form__additional-item input[type="checkbox"] + .program-choice-form__checkbox {
   width: 30px;
   height: 30px;
+
+  display: inline-block;
+
+  margin-right: 14px;
+
+  border: 1px solid #cdcdcd;
+}
+
+.program-choice-form__additional-item input[type="checkbox"]:checked ~ .program-choice-form__check {
+  display: inline-block;
+
+  position: absolute;
+  left: 5px;
+  top: 8px;
+}
+
+.program-choice-form__additional-item label:hover .program-choice-form__checkbox {
+  border-color: #bababa;
+}
+
+.program-choice-form__additional-item input:focus[type="checkbox"] + .program-choice-form__checkbox {
+  outline: #444444;
+}
+
+.program-choice-form__additional-item label:active {
+  opacity: 0.3;
 }
 
 .program-choice-form input[type="text"],
@@ -181,10 +235,39 @@
   height: 45px;
 
   padding-left: 15px;
+  padding-right: 15px;
 
-  border: 1px solid #cdcdcd;
+  border: 1px solid rgba(205, 205, 205, 0.5);
 
   box-sizing: border-box;
+}
+
+.program-choice-form input[type="email"],
+.program-choice-form input[type="tel"] {
+  padding-right: 40px;
+}
+
+.program-choice-form__fieldset input:hover[type="text"],
+.program-choice-form__fieldset input:hover[type="email"],
+.program-choice-form__fieldset input:hover[type="tel"] {
+  border: 1px solid rgba(205, 205, 205, 1);
+}
+
+.program-choice-form__fieldset input:active[type="text"],
+.program-choice-form__fieldset input:active[type="email"],
+.program-choice-form__fieldset input:active[type="tel"],
+.program-choice-form__fieldset input:focus[type="text"],
+.program-choice-form__fieldset input:focus[type="email"],
+.program-choice-form__fieldset input:focus[type="tel"] {
+  border: 2px solid #444444;
+  outline: none;
+}
+
+.program-choice-form__owner-data-wrapper input:active[type="email"] ~ .program-choice-form__icon-email path,
+.program-choice-form__fieldset input:active[type="tel"] .program-choice-form__icon-email,
+.program-choice-form__owner-data-wrapper input:focus[type="email"] ~ .program-choice-form__icon-email path,
+.program-choice-form__fieldset input:focus[type="tel"] .program-choice-form__icon-email {
+  fill: #ffffff;
 }
 
 .program-choice-form input::-webkit-input-placeholder,
@@ -253,16 +336,31 @@
   }
 
   .program-choice-form__fieldset--program {
-    padding: 25px 30px;
+    padding: 22px 30px;
     margin: 0;
     margin-bottom: 97px;
   }
 
-  .program-choice-form__program-item input {
+  .program-choice-form__program-item input[type="radio"] + .program-choice-form__radio {
     width: 40px;
     height: 40px;
+    border-radius: 50%;
 
-    margin-right: 17px;
+    margin-right: 14px;
+
+    border: solid 1px #cdcdcd;
+  }
+
+  .program-choice-form__program-item input[type="radio"]:checked ~ .program-choice-form__radio-check {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+
+    background-color: @primary-color;
+
+    position: absolute;
+    top: 12px;
+    left: 12px;
   }
 
   .program-choice-form__fieldset legend {
@@ -321,13 +419,16 @@
     margin-bottom: 57px;
   }
 
-  .program-choice-form__additional-item input[type="checkbox"] {
+  .program-choice-form__additional-item input[type="checkbox"] + .program-choice-form__checkbox {
     width: 40px;
     height: 40px;
+
+    margin-right: 14px;
   }
 
-  .program-choice-form__additional-item label {
-    padding-left: 18px;
+  .program-choice-form__additional-item input[type="checkbox"]:checked ~ .program-choice-form__check {
+    left: 11px;
+    top: 8px;
   }
 
   .program-choice-form__button {
