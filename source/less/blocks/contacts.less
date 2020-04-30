@@ -30,10 +30,13 @@
 .contacts__map {
   height: 363px;
 
-  position: relative;
+  background-color: @second-color;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
+  position: relative;
 }
 
 .contacts__pin-map {
@@ -53,7 +56,7 @@
 
 @media (min-width: @tablet-width) {
   .contacts__text {
-    padding: 64px 72px 58px 70px;
+    padding: 64px 72px 55px 70px;
   }
 
   .contacts__invitation-text {
@@ -83,9 +86,10 @@
 
   .contacts__pin-map {
     width: 113px;
+    height: 106px;
 
-    top: calc(50% - 43px);
-    left: calc(50% - 56px);
+    top: calc(50% - 53px);
+    left: calc(50% - 57px);
   }
 
   .contacts__map-image {
