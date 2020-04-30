@@ -40,7 +40,9 @@
 }
 
 .program-choice-form__fieldset--program {
-  padding: 21px 19px;
+  padding: 0 19px;
+  padding-top: 25px;
+  padding-bottom: 17px;
   margin: 0 -20px;
   margin-bottom: 42px;
 
@@ -58,11 +60,40 @@
   margin-bottom: 0;
 }
 
-.program-choice-form__program-item input {
+.program-choice-form__program-item label {
+  padding-left: 45px;
+  margin-bottom: 12px;
+
+  position: relative;
+}
+
+.program-choice-form__program-item input[type="radio"] + .program-choice-form__radio {
   width: 30px;
   height: 30px;
+  border-radius: 50%;
 
-  margin-right: 17px;
+  border: solid 1px #cdcdcd;
+
+  position: absolute;
+  top: -6px;
+  left: 0;
+}
+
+.program-choice-form__program-item input[type="radio"]:checked ~ .program-choice-form__radio-check {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+
+  background-color: @primary-color;
+
+  position: absolute;
+  top: 4px;
+  left: 10px;
+}
+
+.program-choice-form__program-item label:hover ~ .program-choice-form__radio,
+.program-choice-form__program-item label:focus ~ .program-choice-form__radio {
+  border-color: #bababa;
 }
 
 .program-choice-form__fieldset--owner-data {

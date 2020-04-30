@@ -14,8 +14,12 @@
 .result__image-before,
 .result__image-after {
   position: absolute;
-  top: 0;
+  top: -12px;
   left: 0;
+}
+
+.result__image-after {
+  display: none;
 }
 
 .result__button {
@@ -26,6 +30,15 @@
 
   font-size: 16px;
   line-height: 20px;
+}
+
+.result__button:hover,
+.result__button:focus {
+  border-bottom: 1px solid;
+}
+
+.result__button:active {
+  border-bottom: none;
 }
 
 .result__button--before {
@@ -52,6 +65,8 @@
   .result__image {
     height: 310px;
 
+    margin-bottom: 56px;
+
     position: relative;
 
     z-index: 1;
@@ -62,7 +77,7 @@
     width: 690px;
     height: 517px;
 
-    top: -200px;
+    top: -170px;
     left: 46px;
   }
 
@@ -97,5 +112,9 @@
   .result__image-after {
     top: -190px;
     left: 30px;
+  }
+
+  .result__slider {
+    padding-left: 73px;
   }
 }

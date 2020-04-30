@@ -22,10 +22,21 @@
             <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Cat Energy">
           </picture>
         </a>
-        <button type="button" class="menu-button page-header__menu-button">Menu</button>
+        <button type="button" class="menu-button page-header__menu-button menu-button--nojs">
+          <svg class="menu-button__burger" width="25" height="19" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 18"
+            style="enable-background:new 0 0 24 18;" xml:space="preserve">
+            <rect class="menu-button__bottom-line" y="16" width="24" height="2" />
+            <rect class="menu-button__middle-line" y="8" width="24" height="2" />
+            <rect class="menu-button__top-line" width="24" height="2" />
+          </svg>
+          <svg class="menu-button__close" width="19" height="19" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+            <path d="M18 1.3L16.7 0 9 7.7 1.3 0 0 1.3 7.7 9 0 16.7 1.3 18 9 10.3l7.7 7.7 1.3-1.3L10.3 9z" />
+          </svg>
+        </button>
       </div>
 
-      <nav class="main-navigation">
+      <nav class="main-navigation main-navigation--nojs">
         <ul class="main-navigation__list">
           <li class="main-navigation__item">
             <a href="index.html" class="main-navigation__item-link">Главная</a>
@@ -38,6 +49,19 @@
           </li>
         </ul>
       </nav>
+
+      <script>
+        var menuButton = document.querySelector('.page-header__menu-button');
+        var nav = document.querySelector('.main-navigation');
+
+        menuButton.classList.remove('menu-button--nojs');
+        nav.classList.remove('main-navigation--nojs')
+
+        menuButton.addEventListener('click', function () {
+          menuButton.classList.toggle('menu-button--close');
+          nav.classList.toggle('main-navigation--open');
+        })
+      </script>
 
     </header>
 
@@ -65,16 +89,28 @@
 
           <fieldset class="program-choice-form__fieldset program-choice-form__fieldset--program">
             <div class="program-choice-form__program-item">
-              <input type="radio" name="program" id="slimming" checked>
-              <label for="slimming">Похудение</label>
+              <label for="slimming">
+                <input type="radio" name="program" class="visually-hidden" id="slimming" checked>
+                <span class="program-choice-form__radio"></span>
+                <span class="program-choice-form__radio-check"></span>
+                Похудение
+              </label>
             </div>
             <div class="program-choice-form__program-item">
-              <input type="radio" name="program" id="weight-gain">
-              <label for="weight-gain">Набор массы</label>
+              <label for="weight-gain">
+                <input type="radio" name="program" class="visually-hidden" id="weight-gain">
+                <span class="program-choice-form__radio"></span>
+                <span class="program-choice-form__radio-check"></span>
+                Набор массы
+              </label>
             </div>
             <div class="program-choice-form__program-item">
-              <input type="radio" name="program" id="advice">
-              <label for="advice">Не знаю (Нужен ваш совет)</label>
+              <label for="advice">
+                <input type="radio" name="program" class="visually-hidden" id="advice">
+                <span class="program-choice-form__radio"></span>
+                <span class="program-choice-form__radio-check"></span>
+                Не знаю (Нужен ваш совет)
+              </label>
             </div>
           </fieldset>
         </div>

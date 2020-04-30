@@ -6,7 +6,15 @@
 
   text-transform: uppercase;
 
-  // display: none;
+  display: none;
+}
+
+.main-navigation--nojs {
+  display: block;
+}
+
+.main-navigation--open {
+  display: block;
 }
 
 .main-navigation__list {
@@ -23,6 +31,15 @@
 .main-navigation__item-link {
   color: @primary-text-color;
   text-decoration: none;
+}
+
+.main-navigation__item-link:hover,
+.main-navigation__item-link:focus {
+  opacity: 0.6;
+}
+
+.main-navigation__item-link:active {
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {
