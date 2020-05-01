@@ -53,19 +53,6 @@
         </ul>
       </nav>
 
-      <script>
-        var menuButton = document.querySelector('.page-header__menu-button');
-        var nav = document.querySelector('.main-navigation');
-
-        menuButton.classList.remove('menu-button--nojs');
-        nav.classList.remove('main-navigation--nojs')
-
-        menuButton.addEventListener('click', function () {
-          menuButton.classList.toggle('menu-button--close');
-          nav.classList.toggle('main-navigation--open');
-        })
-      </script>
-
     </header>
 
     <main class="main-content">
@@ -80,13 +67,13 @@
             <p class="intro__slogan">
               Занялся собой? Займись котом!
             </p>
-            <a href="program.html" class="intro__link button button--inline-block">Подобрать программу</a>
+            <a href="form.html" class="intro__link button button--inline-block">Подобрать программу</a>
           </div>
           <div class="intro__image">
             <picture>
-              <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png">
-              <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg">
-              <img src="img/index-can-mobile@1x.png" alt="Банка с кормом Cat Energy Pro" class="intro__picture">
+              <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
+              <img src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="Банка с кормом Cat Energy Pro" class="intro__picture">
             </picture>
           </div>
         </div>
@@ -194,14 +181,14 @@
             <div class="example__dark-grey-block"></div>
             <div class="result__image">
               <picture>
-                <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png">
-                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
-                <img src="img/before-mobile@1x.png" class="result__image-before" alt="Кот - до">
+                <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                <img src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" class="result__image-before" alt="Кот - до">
               </picture>
               <picture>
-                <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png">
-                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
-                <img src="img/after-mobile@1x.png" class="result__image-after" alt="Кот - после">
+                <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                <img src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" class="result__image-after" alt="Кот - после">
               </picture>
             </div>
             <div class="result__slider">
@@ -231,9 +218,9 @@
         <div class="contacts__map">
           <img src="img/map-pin.png" alt="Указатель местоположения" width="55" height="53" class="contacts__pin-map">
           <picture>
-            <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png">
-            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png">
-            <img src="img/bg-map-mobile@1x.png" class="contacts__map-image"
+            <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+            <img src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" class="contacts__map-image"
               alt="Мы находимся: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
           </picture>
         </div>
@@ -298,7 +285,7 @@
     </footer>
 
   </div>
-
+<script src="js/menu-open.js"></script>
 </body>
 
 </html>

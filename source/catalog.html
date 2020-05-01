@@ -51,19 +51,6 @@
         </ul>
       </nav>
 
-      <script>
-        var menuButton = document.querySelector('.page-header__menu-button');
-        var nav = document.querySelector('.main-navigation');
-
-        menuButton.classList.remove('menu-button--nojs');
-        nav.classList.remove('main-navigation--nojs')
-
-        menuButton.addEventListener('click', function () {
-          menuButton.classList.toggle('menu-button--close');
-          nav.classList.toggle('main-navigation--open');
-        })
-      </script>
-
     </header>
 
     <main class="main-content main-catalog">
@@ -76,9 +63,12 @@
             <div class="catalog__item-wrapper">
               <a href="#" class="catalog__link-image">
                 <picture>
-                  <source media="(min-width: 1300px)" srcset="img/chicken-small-desktop@1x.png">
-                  <source media="(min-width: 768px)" srcset="img/chicken-small-tablet@1x.png">
-                  <img src="img/chicken-small-mobile@1x.jpg" alt="Банка корма" class="catalog__image">
+                  <source media="(min-width: 1300px)"
+                    srcset="img/chicken-small-desktop@1x.png 1x, img/chicken-small-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/chicken-small-tablet@1x.png 1x, img/chicken-small-tablet@2x.png 2x">
+                  <img src="img/chicken-small-mobile@1x.jpg" srcset="img/chicken-small-mobile@2x.jpg 2x"
+                    alt="Банка корма" class="catalog__image">
                 </picture>
               </a>
               <div class="catalog__text">
@@ -105,9 +95,12 @@
             <div class="catalog__item-wrapper">
               <a href="#" class="catalog__link-image">
                 <picture>
-                  <source media="(min-width: 1300px)" srcset="img/chicken-big-desktop@1x.png">
-                  <source media="(min-width: 768px)" srcset="img/chicken-big-tablet@1x.png">
-                  <img src="img/chicken-big-mobile@1x.jpg" alt="Банка корма" class="catalog__image catalog__image--big">
+                  <source media="(min-width: 1300px)"
+                    srcset="img/chicken-big-desktop@1x.png 1x, img/chicken-big-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/chicken-big-tablet@1x.png 1x, img/chicken-big-tablet@2x.png 2x">
+                  <img src="img/chicken-big-mobile@1x.jpg" srcset="img/chicken-big-mobile@2x.jpg 2x" alt="Банка корма"
+                    class="catalog__image catalog__image--big">
                 </picture>
               </a>
               <div class="catalog__text">
@@ -134,9 +127,12 @@
             <div class="catalog__item-wrapper">
               <a href="#" class="catalog__link-image">
                 <picture>
-                  <source media="(min-width: 1300px)" srcset="img/fish-small-desktop@1x.png">
-                  <source media="(min-width: 768px)" srcset="img/fish-small-tablet@1x.png">
-                  <img src="img/fish-small-mobile@1x.jpg" alt="Банка корма" class="catalog__image">
+                  <source media="(min-width: 1300px)"
+                    srcset="img/fish-small-desktop@1x.png 1x, img/fish-small-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/fish-small-tablet@1x.png 1x, img/fish-small-tablet@2x.png 2x">
+                  <img src="img/fish-small-mobile@1x.jpg" srcset="img/fish-small-mobile@2x.jpg 2x" alt="Банка корма"
+                    class="catalog__image">
                 </picture>
               </a>
               <div class="catalog__text">
@@ -163,9 +159,12 @@
             <div class="catalog__item-wrapper">
               <a href="#" class="catalog__link-image">
                 <picture>
-                  <source media="(min-width: 1300px)" srcset="img/fish-big-desktop@1x.png">
-                  <source media="(min-width: 768px)" srcset="img/fish-big-tablet@1x.png">
-                  <img src="img/fish-big-mobile@1x.jpg" alt="Банка корма" class="catalog__image catalog__image--big">
+                  <source media="(min-width: 1300px)"
+                    srcset="img/fish-big-desktop@1x.png 1x, img/fish-big-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/fish-big-tablet@1x.png 1x, img/fish-big-tablet@2x.png 2x">
+                  <img src="img/fish-big-mobile@1x.jpg" srcset="img/fish-big-mobile@2x.jpg 2x" alt="Банка корма"
+                    class="catalog__image catalog__image--big">
                 </picture>
               </a>
               <div class="catalog__text">
@@ -192,9 +191,12 @@
             <div class="catalog__item-wrapper">
               <a href="#" class="catalog__link-image">
                 <picture>
-                  <source media="(min-width: 1300px)" srcset="img/buckwheat-small-desktop@1x.png">
-                  <source media="(min-width: 768px)" srcset="img/buckwheat-small-tablet@1x.png">
-                  <img src="img/buckwheat-small-mobile@1x.jpg" alt="Банка корма" class="catalog__image">
+                  <source media="(min-width: 1300px)"
+                    srcset="img/buckwheat-small-desktop@1x.png 1x, img/buckwheat-small-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/buckwheat-small-tablet@1x.png 1x, img/buckwheat-small-tablet@2x.png 2x">
+                  <img src="img/buckwheat-small-mobile@1x.jpg" srcset="img/buckwheat-small-mobile@2x.jpg 2x"
+                    alt="Банка корма" class="catalog__image">
                 </picture>
               </a>
               <div class="catalog__text">
@@ -221,10 +223,12 @@
             <div class="catalog__item-wrapper">
               <a href="#" class="catalog__link-image">
                 <picture>
-                  <source media="(min-width: 1300px)" srcset="img/buckwheat-big-desktop@1x.png">
-                  <source media="(min-width: 768px)" srcset="img/buckwheat-big-tablet@1x.png">
-                  <img src="img/buckwheat-big-mobile@1x.jpg" alt="Банка корма"
-                    class="catalog__image catalog__image--big">
+                  <source media="(min-width: 1300px)"
+                    srcset="img/buckwheat-big-desktop@1x.png 1x, img/buckwheat-big-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/buckwheat-big-tablet@1x.png 1x, img/buckwheat-big-tablet@2x.png 2x">
+                  <img src="img/buckwheat-big-mobile@1x.jpg" srcset="img/buckwheat-big-mobile@2x.jpg 2x"
+                    alt="Банка корма" class="catalog__image catalog__image--big">
                 </picture>
               </a>
               <div class="catalog__text">
@@ -251,9 +255,12 @@
             <div class="catalog__item-wrapper">
               <a href="#" class="catalog__link-image">
                 <picture>
-                  <source media="(min-width: 1300px)" srcset="img/rice-small-desktop@1x.png">
-                  <source media="(min-width: 768px)" srcset="img/rice-small-tablet@1x.png">
-                  <img src="img/rice-small-mobile@1x.jpg" alt="Банка корма" class="catalog__image">
+                  <source media="(min-width: 1300px)"
+                    srcset="img/rice-small-desktop@1x.png, img/rice-small-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/rice-small-tablet@1x.png 1x, img/rice-small-tablet@2x.jpg 2x">
+                  <img src="img/rice-small-mobile@1x.jpg" srcset="img/rice-small-mobile@2x.jpg 2x" alt="Банка корма"
+                    class="catalog__image">
                 </picture>
               </a>
               <div class="catalog__text">
@@ -355,9 +362,9 @@
         <div class="contacts__map">
           <img src="img/map-pin.png" alt="Указатель местоположения" width="55" height="53" class="contacts__pin-map">
           <picture>
-            <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png">
-            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png">
-            <img src="img/bg-map-mobile@1x.png" class="contacts__map-image"
+            <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+            <img src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" class="contacts__map-image"
               alt="Мы находимся: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
           </picture>
         </div>
@@ -420,7 +427,10 @@
       </section>
 
     </footer>
+
   </div>
+
+  <script src="js/menu-open.js"></script>
 </body>
 
 </html>
