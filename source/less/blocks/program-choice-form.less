@@ -90,12 +90,15 @@
 
   position: absolute;
   top: 10px;
-  left: 11px;
+  left: 10px;
 }
 
-.program-choice-form__program-item input[type="radio"]:hover + .program-choice-form__radio,
-.program-choice-form__program-item input[type="radio"]:focus + .program-choice-form__radio {
+.program-choice-form__program-item input:hover[type="radio"] + .program-choice-form__radio {
   border-color: #bababa;
+}
+
+.program-choice-form__program-item input:focus[type="radio"] + .program-choice-form__radio {
+  outline: #444444;
 }
 
 .program-choice-form__program-item label:active {
