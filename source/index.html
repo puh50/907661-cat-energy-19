@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement("picture");
+  </script>
+  <script src="picturefill.js" async></script>
 </head>
 
 <body>
@@ -71,9 +76,12 @@
           </div>
           <div class="intro__image">
             <picture>
-              <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
-              <img src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="Банка с кормом Cat Energy Pro" class="intro__picture">
+              <source media="(min-width: 1300px)"
+                srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
+              <img src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x"
+                alt="Банка с кормом Cat Energy Pro" class="intro__picture">
             </picture>
           </div>
         </div>
@@ -91,14 +99,14 @@
                 поможет вашему питомцу сбросить лишний вес.</p>
               <a href="#" class="programs__item-link">
                 Каталог Slim
-                <svg class="programs__arrow-short" width="25" height="12" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 2 24.2 11"
-                  style="enable-background:new 0 0 24.2 11;" xml:space="preserve">
+                <svg class="programs__arrow-short" width="25" height="12" version="1.1"
+                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 2 24.2 11" style="enable-background:new 0 0 24.2 11;" xml:space="preserve">
                   <polygon fill="#3F4242" class="st0" points="17.6,0 24.2,5.5 17.6,11 17.6,6.6 0,6.6 0,4.4 17.6,4.4 " />
                 </svg>
-                <svg class="programs__arrow-long" width="34" height="12" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 2 32 11"
-                  style="enable-background:new 0 0 32 11;" xml:space="preserve">
+                <svg class="programs__arrow-long" width="34" height="12" version="1.1"
+                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 2 32 11" style="enable-background:new 0 0 32 11;" xml:space="preserve">
                   <polygon fill="#3F4242" class="st0" points="25.4,0 32,5.5 25.4,11 25.4,6.6 0,6.6 0,4.4 25.4,4.4 " />
                 </svg>
               </a>
@@ -112,14 +120,14 @@
                 необходимые мышцы!</p>
               <a href="#" class="programs__item-link">
                 Каталог Pro
-                <svg class="programs__arrow-short" width="25" height="12" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 2 24.2 11"
-                  style="enable-background:new 0 0 24.2 11;" xml:space="preserve">
+                <svg class="programs__arrow-short" width="25" height="12" version="1.1"
+                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 2 24.2 11" style="enable-background:new 0 0 24.2 11;" xml:space="preserve">
                   <polygon fill="#3F4242" class="st0" points="17.6,0 24.2,5.5 17.6,11 17.6,6.6 0,6.6 0,4.4 17.6,4.4 " />
                 </svg>
-                <svg class="programs__arrow-long" width="34" height="12" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 2 32 11"
-                  style="enable-background:new 0 0 32 11;" xml:space="preserve">
+                <svg class="programs__arrow-long" width="34" height="12" version="1.1"
+                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 2 32 11" style="enable-background:new 0 0 32 11;" xml:space="preserve">
                   <polygon fill="#3F4242" class="st0" points="25.4,0 32,5.5 25.4,11 25.4,6.6 0,6.6 0,4.4 25.4,4.4 " />
                 </svg>
               </a>
@@ -133,16 +141,20 @@
           <h2 class="advantages__title">Как это работает</h2>
           <ul class="advantages__list">
             <li class="advantages__item advantages__item--leaf">
-              <p class="advantages__text advantages__text--1">Функциональное питание содержит только полезные питательные вещества.</p>
+              <p class="advantages__text advantages__text--1">Функциональное питание содержит только полезные
+                питательные вещества.</p>
             </li>
             <li class="advantages__item advantages__item--powder">
-              <p class="advantages__text advantages__text--2">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+              <p class="advantages__text advantages__text--2">Выпускается в виде порошка, который нужно лишь залить
+                кипятком и готово.</p>
             </li>
             <li class="advantages__item advantages__item--dining">
-              <p class="advantages__text advantages__text--3">Замените один-два приема обычной еды на наше функциональное питание.</p>
+              <p class="advantages__text advantages__text--3">Замените один-два приема обычной еды на наше
+                функциональное питание.</p>
             </li>
             <li class="advantages__item advantages__item--clock">
-              <p class="advantages__text advantages__text--4 advantages__text--br">Уже через месяц наслаждайтесь изменениями к лучшему<br>
+              <p class="advantages__text advantages__text--4 advantages__text--br">Уже через месяц наслаждайтесь
+                изменениями к лучшему<br>
                 вашего питомца!</p>
             </li>
           </ul>
@@ -183,12 +195,14 @@
               <picture>
                 <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-                <img src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" class="result__image-before" alt="Кот - до">
+                <img src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" class="result__image-before"
+                  alt="Кот - до">
               </picture>
               <picture>
                 <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
-                <img src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" class="result__image-after" alt="Кот - после">
+                <img src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" class="result__image-after"
+                  alt="Кот - после">
               </picture>
             </div>
             <div class="result__slider">
@@ -216,6 +230,10 @@
           <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></p>
         </div>
         <div class="contacts__map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20Russia%2C%20191186!5e0!3m2!1sen!2sby!4v1588416878834!5m2!1sen!2sby"
+            frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+          </iframe>
           <img src="img/map-pin.png" alt="Указатель местоположения" width="55" height="53" class="contacts__pin-map">
           <picture>
             <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
@@ -285,7 +303,9 @@
     </footer>
 
   </div>
-<script src="js/menu-open.js"></script>
+
+  <script src="js/main-menu.js"></script>
+  <script src="js/slider.js"></script>
 </body>
 
 </html>
