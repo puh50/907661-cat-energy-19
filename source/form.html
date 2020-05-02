@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Кэт энерджи - Подбор программы</title>
   <link rel="stylesheet" href="css/style.css">
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement("picture");
+  </script>
+  <script src="picturefill.js" async></script>
 </head>
 
 <body>
@@ -60,53 +65,57 @@
 
         <div class="program-choice-form__pet-program-wrapper">
           <fieldset class="program-choice-form__fieldset program-choice-form__fieldset--pet-data">
-            <div class="program-choice-form__pet-data-item">
-              <label for="name">Имя:*</label>
-              <input type="text" id="name" name="name" placeholder="Барсик" required>
-            </div>
-            <div class="program-choice-form__pet-data-item">
-              <label for="weight">Вес (кг):*</label>
-              <input type="text" id="weight" name="weight" placeholder="7" required>
-            </div>
-            <div class="program-choice-form__pet-data-item">
-              <label for="age">Возраст (лет):</label>
-              <input type="text" id="age" name="age" placeholder="7">
-            </div>
+            <ul>
+              <li class="program-choice-form__pet-data-item">
+                <label for="name">Имя:*</label>
+                <input type="text" id="name" name="name" placeholder="Барсик" required>
+              </li>
+              <li class="program-choice-form__pet-data-item">
+                <label for="weight">Вес (кг):*</label>
+                <input type="text" id="weight" name="weight" placeholder="7" required>
+              </li>
+              <li class="program-choice-form__pet-data-item">
+                <label for="age">Возраст (лет):</label>
+                <input type="text" id="age" name="age" placeholder="7">
+              </li>
+            </ul>
           </fieldset>
 
           <fieldset class="program-choice-form__fieldset program-choice-form__fieldset--program">
-            <div class="program-choice-form__program-item">
-              <label for="slimming">
-                <input type="radio" name="program" class="visually-hidden" id="slimming" checked>
-                <span class="program-choice-form__radio"></span>
-                <span class="program-choice-form__radio-check"></span>
-                Похудение
-              </label>
-            </div>
-            <div class="program-choice-form__program-item">
-              <label for="weight-gain">
-                <input type="radio" name="program" class="visually-hidden" id="weight-gain">
-                <span class="program-choice-form__radio"></span>
-                <span class="program-choice-form__radio-check"></span>
-                Набор массы
-              </label>
-            </div>
-            <div class="program-choice-form__program-item">
-              <label for="advice">
-                <input type="radio" name="program" class="visually-hidden" id="advice">
-                <span class="program-choice-form__radio"></span>
-                <span class="program-choice-form__radio-check"></span>
-                Не знаю (Нужен ваш совет)
-              </label>
-            </div>
+            <ul>
+              <li class="program-choice-form__program-item">
+                <label for="slimming">
+                  <input type="radio" name="program" class="visually-hidden" id="slimming" checked>
+                  <span class="program-choice-form__radio"></span>
+                  <span class="program-choice-form__radio-check"></span>
+                  Похудение
+                </label>
+              </li>
+              <li class="program-choice-form__program-item">
+                <label for="weight-gain">
+                  <input type="radio" name="program" class="visually-hidden" id="weight-gain">
+                  <span class="program-choice-form__radio"></span>
+                  <span class="program-choice-form__radio-check"></span>
+                  Набор массы
+                </label>
+              </li>
+              <li class="program-choice-form__program-item">
+                <label for="advice">
+                  <input type="radio" name="program" class="visually-hidden" id="advice">
+                  <span class="program-choice-form__radio"></span>
+                  <span class="program-choice-form__radio-check"></span>
+                  Не знаю (Нужен ваш совет)
+                </label>
+              </li>
+            </ul>
           </fieldset>
         </div>
 
         <div class="horizontal-rule horizontal-rule--owner-data"></div>
         <fieldset class="program-choice-form__fieldset program-choice-form__fieldset--owner-data">
           <legend>Контактные данные (владельца кота)</legend>
-          <div class="program-choice-form__owner-items-wrapper">
-            <div class="program-choice-form__owner-data-item">
+          <ul class="program-choice-form__owner-items-list">
+            <li class="program-choice-form__owner-data-item">
               <label for="email">E-mail:*</label>
               <div class="program-choice-form__owner-data-wrapper">
                 <input type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
@@ -119,8 +128,8 @@
                   </svg>
                 </span>
               </div>
-            </div>
-            <div class="program-choice-form__owner-data-item">
+            </li>
+            <li class="program-choice-form__owner-data-item">
               <label for="phone">Телефон:*</label>
               <div class="program-choice-form__owner-data-wrapper">
                 <input type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
@@ -137,8 +146,8 @@
                   </svg>
                 </span>
               </div>
-            </div>
-          </div>
+            </li>
+          </ul>
         </fieldset>
 
         <div class="horizontal-rule horizontal-rule--comment"></div>
@@ -151,8 +160,8 @@
         <div class="horizontal-rule horizontal-rule--additional"></div>
         <fieldset class="program-choice-form__fieldset program-choice-form__additional">
           <legend>Дополнительно</legend>
-          <div class="program-choice-form__additional-wrapper">
-            <div class="program-choice-form__additional-item">
+          <ul class="program-choice-form__additional-list">
+            <li class="program-choice-form__additional-item">
               <label for="sweetener">
                 <input type="checkbox" name="sweetener" class="visually-hidden" id="sweetener" checked>
                 <span class="program-choice-form__checkbox"></span>
@@ -164,8 +173,8 @@
                   </svg>
                 </span>
                 Сахарозаменитель</label>
-            </div>
-            <div class="program-choice-form__additional-item">
+            </li>
+            <li class="program-choice-form__additional-item">
               <label for="water">
                 <input type="checkbox" name="water" class="visually-hidden" id="water">
                 <span class="program-choice-form__checkbox"></span>
@@ -177,8 +186,8 @@
                   </svg>
                 </span>
                 Питьевая вода</label>
-            </div>
-            <div class="program-choice-form__additional-item">
+            </li>
+            <li class="program-choice-form__additional-item">
               <label for="milk">
                 <input type="checkbox" name="milk" class="visually-hidden" id="milk">
                 <span class="program-choice-form__checkbox"></span>
@@ -190,8 +199,8 @@
                   </svg>
                 </span>
                 Молоко</label>
-            </div>
-            <div class="program-choice-form__additional-item">
+            </li>
+            <li class="program-choice-form__additional-item">
               <label for="vitamins">
                 <input type="checkbox" name="vitamins" class="visually-hidden" id="vitamins">
                 <span class="program-choice-form__checkbox"></span>
@@ -203,8 +212,8 @@
                   </svg>
                 </span>
                 Витамины</label>
-            </div>
-          </div>
+            </li>
+          </ul>
         </fieldset>
 
         <button type="submit" class="program-choice-form__button button">Отправить заявку</button>
@@ -222,6 +231,10 @@
           <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></p>
         </div>
         <div class="contacts__map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20Russia%2C%20191186!5e0!3m2!1sen!2sby!4v1588416878834!5m2!1sen!2sby"
+            frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+          </iframe>
           <img src="img/map-pin.png" alt="Указатель местоположения" width="55" height="53" class="contacts__pin-map">
           <picture>
             <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
@@ -292,7 +305,7 @@
 
   </div>
 
-  <script src="js/menu-open.js"></script>
+  <script src="js/main-menu.js"></script>
 </body>
 
 </html>

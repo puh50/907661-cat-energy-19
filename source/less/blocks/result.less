@@ -18,8 +18,18 @@
   left: 0;
 }
 
+.result__image-before--no-display {
+  display: none;
+}
+
 .result__image-after {
   display: none;
+
+  z-index: 1;
+}
+
+.result__image-after--display {
+  display: inline-block;
 }
 
 .result__button {
@@ -31,6 +41,8 @@
 
   font-size: 16px;
   line-height: 20px;
+
+  cursor: pointer;
 }
 
 .result__button:hover,
