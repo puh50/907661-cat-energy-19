@@ -13,6 +13,17 @@
   border: none;
 }
 
+.program-choice-form__fieldset legend {
+  max-width: 210px;
+
+  padding-right: 25px;
+
+  background-color: #ffffff;
+
+  font-size: 24px;
+  line-height: 24px;
+}
+
 .program-choice-form__fieldset ul {
   padding: 0;
   margin: 0;
@@ -21,6 +32,59 @@
 .program-choice-form__fieldset label {
   cursor: pointer;
 }
+
+.program-choice-form__input {
+  height: 45px;
+
+  padding-left: 15px;
+  padding-right: 15px;
+
+  border: 1px solid rgba(205, 205, 205, 0.5);
+
+  box-sizing: border-box;
+}
+
+.program-choice-form__input:hover {
+  border: 1px solid rgba(205, 205, 205, 1);
+}
+
+.program-choice-form__input:active,
+.program-choice-form__input:focus {
+  border: 2px solid #444444;
+  outline: none;
+}
+
+.program-choice-form__input--error {
+  border: 2px solid #ff8282;
+}
+
+.program-choice-form input::-webkit-input-placeholder,
+.program-choice-form textarea::-webkit-input-placeholder { /* Edge */
+  font-size: 16px;
+  line-height: 18px;
+
+  color: @third-text-color;
+
+  text-transform: uppercase;
+}
+
+.program-choice-form input:-ms-input-placeholder,
+.program-choice-form textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font-size: 16px;
+  line-height: 18px;
+
+  color: @third-text-color;
+}
+
+.program-choice-form input::placeholder,
+.program-choice-form textarea::placeholder {
+  font-size: 16px;
+  line-height: 18px;
+
+  color: @third-text-color;
+}
+
+// Pet-data
 
 .program-choice-form__fieldset--pet-data {
   margin-bottom: 10px;
@@ -48,10 +112,12 @@
   width: 100%;
 }
 
+// Programm
+
 .program-choice-form__fieldset--program {
   padding: 0 19px;
   padding-top: 18px;
-  padding-bottom: 17px;
+  padding-bottom: 19px;
   margin: 0 -20px;
   margin-bottom: 42px;
 
@@ -59,7 +125,7 @@
 }
 
 .program-choice-form__program-item {
-  margin-bottom: 12px;
+  margin-bottom: 11px;
 
   display: flex;
   align-items: center;
@@ -69,60 +135,59 @@
   margin-bottom: 0;
 }
 
-.program-choice-form__program-item label {
+.program-choice-form__program-label > span {
   display: flex;
   align-items: center;
 
   position: relative;
 }
 
-.program-choice-form__program-item input[type="radio"] + .program-choice-form__radio {
+.program-choice-form__program-label > input + span::before {
+  content: "";
+
   width: 30px;
   height: 30px;
   border-radius: 50%;
 
   margin-right: 14px;
 
-  border: solid 1px #cdcdcd;
+  border: 1px solid #cdcdcd;
+
+  display: inline-block;
 }
 
-.program-choice-form__program-item input[type="radio"]:checked ~ .program-choice-form__radio-check {
+.program-choice-form__program-label > input:checked + span::after {
+  content: "";
+
   width: 12px;
   height: 12px;
   border-radius: 50%;
 
   background-color: @primary-color;
 
+  display: inline-block;
+
   position: absolute;
   top: 10px;
   left: 10px;
 }
 
-.program-choice-form__program-item input:hover[type="radio"] + .program-choice-form__radio {
+.program-choice-form__program-label:hover > input + span::before {
   border-color: #bababa;
 }
 
-.program-choice-form__program-item input:focus[type="radio"] + .program-choice-form__radio {
-  outline: #444444;
+.program-choice-form__program-label > input:focus + span::before {
+  outline: 1px solid #444444;
 }
 
-.program-choice-form__program-item label:active {
+.program-choice-form__program-label:active {
   opacity: 0.3;
 }
 
+// Owner data
+
 .program-choice-form__fieldset--owner-data {
   margin-bottom: 28px;
-}
-
-.program-choice-form__fieldset legend {
-  max-width: 210px;
-
-  padding-right: 25px;
-
-  background-color: #ffffff;
-
-  font-size: 24px;
-  line-height: 24px;
 }
 
 .program-choice-form__fieldset--owner-data legend {
@@ -152,16 +217,42 @@
   width: 100%;
 }
 
-.program-choice-form__owner-input-icon {
-  position: absolute;
-  top: 14px;
-  right: 15px;
+.program-choice-form__input--email,
+.program-choice-form__input--phone {
+  padding-right: 40px;
 }
 
-.program-choice-form__owner-input-icon--phone {
-  top: 12px;
-  right: 13px;
+.program-choice-form__input--email {
+  background-image: url("../../img/icon-mail.svg");
+  background-repeat: no-repeat;
+  background-size: 18px 14px;
+  background-position: center right 14px;
 }
+
+.program-choice-form__input--phone {
+  background-image: url("../../img/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-size: 21px 21px;
+  background-position: center right 10px;
+}
+
+.program-choice-form__input--email:focus {
+  background-image: url("../../img/icon-mail-active.svg");
+}
+
+.program-choice-form__input--phone:focus {
+  background-image: url("../../img/icon-phone-active.svg");
+}
+
+.program-choice-form__input--error.program-choice-form__input--email {
+  background-image: url("../../img/icon-mail-error.svg");
+}
+
+.program-choice-form__input--error.program-choice-form__input--phone {
+  background-image: url("../../img/icon-phone-error.svg");
+}
+
+// Comment
 
 .program-choice-form__comment {
   margin-bottom: 40px;
@@ -187,6 +278,8 @@
   outline: none;
 }
 
+// Additional goods
+
 .program-choice-form__additional legend {
   margin-bottom: 34px;
 }
@@ -197,18 +290,16 @@
   list-style: none;
 }
 
-.program-choice-form__additional-item label {
+.program-choice-form__additional-label > span {
   display: flex;
   align-items: center;
 
   position: relative;
 }
 
-.program-choice-form__check {
-  display: none;
-}
+.program-choice-form__additional-label > input + span::before {
+  content: "";
 
-.program-choice-form__additional-item input[type="checkbox"] + .program-choice-form__checkbox {
   width: 30px;
   height: 30px;
 
@@ -219,7 +310,16 @@
   border: 1px solid #cdcdcd;
 }
 
-.program-choice-form__additional-item input[type="checkbox"]:checked ~ .program-choice-form__check {
+.program-choice-form__additional-label > input:checked + span::after {
+  content: "";
+
+  width: 22px;
+  height: 17px;
+
+  background-image: url("../../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-size: 22px 17px;
+
   display: inline-block;
 
   position: absolute;
@@ -227,84 +327,19 @@
   top: 8px;
 }
 
-.program-choice-form__additional-item label:hover .program-choice-form__checkbox {
+.program-choice-form__additional-label:hover > span::before {
   border-color: #bababa;
 }
 
-.program-choice-form__additional-item input:focus[type="checkbox"] + .program-choice-form__checkbox {
-  outline: #444444;
+.program-choice-form__additional-label > input:focus + span::before {
+  outline: 1px solid #444444;
 }
 
-.program-choice-form__additional-item label:active {
+.program-choice-form__additional-label:active > span {
   opacity: 0.3;
 }
 
-.program-choice-form input[type="text"],
-.program-choice-form input[type="email"],
-.program-choice-form input[type="tel"] {
-  height: 45px;
-
-  padding-left: 15px;
-  padding-right: 15px;
-
-  border: 1px solid rgba(205, 205, 205, 0.5);
-
-  box-sizing: border-box;
-}
-
-.program-choice-form input[type="email"],
-.program-choice-form input[type="tel"] {
-  padding-right: 40px;
-}
-
-.program-choice-form__fieldset input:hover[type="text"],
-.program-choice-form__fieldset input:hover[type="email"],
-.program-choice-form__fieldset input:hover[type="tel"] {
-  border: 1px solid rgba(205, 205, 205, 1);
-}
-
-.program-choice-form__fieldset input:active[type="text"],
-.program-choice-form__fieldset input:active[type="email"],
-.program-choice-form__fieldset input:active[type="tel"],
-.program-choice-form__fieldset input:focus[type="text"],
-.program-choice-form__fieldset input:focus[type="email"],
-.program-choice-form__fieldset input:focus[type="tel"] {
-  border: 2px solid #444444;
-  outline: none;
-}
-
-.program-choice-form__owner-data-wrapper input:active[type="email"] ~ .program-choice-form__icon-email path,
-.program-choice-form__fieldset input:active[type="tel"] .program-choice-form__icon-email,
-.program-choice-form__owner-data-wrapper input:focus[type="email"] ~ .program-choice-form__icon-email path,
-.program-choice-form__fieldset input:focus[type="tel"] .program-choice-form__icon-email {
-  fill: #ffffff;
-}
-
-.program-choice-form input::-webkit-input-placeholder,
-.program-choice-form textarea::-webkit-input-placeholder { /* Edge */
-  font-size: 16px;
-  line-height: 18px;
-
-  color: @third-text-color;
-
-  text-transform: uppercase;
-}
-
-.program-choice-form input:-ms-input-placeholder,
-.program-choice-form textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  font-size: 16px;
-  line-height: 18px;
-
-  color: @third-text-color;
-}
-
-.program-choice-form input::placeholder,
-.program-choice-form textarea::placeholder {
-  font-size: 16px;
-  line-height: 18px;
-
-  color: @third-text-color;
-}
+// button and sign
 
 .program-choice-form__button {
   margin-top: 23px;
@@ -346,29 +381,20 @@
   }
 
   .program-choice-form__fieldset--program {
-    padding: 22px 30px;
+    padding: 23px 30px;
     margin: 0;
     margin-bottom: 97px;
   }
 
-  .program-choice-form__program-item input[type="radio"] + .program-choice-form__radio {
+  .program-choice-form__program-label > input + span::before {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
-
-    margin-right: 14px;
-
-    border: solid 1px #cdcdcd;
   }
 
-  .program-choice-form__program-item input[type="radio"]:checked ~ .program-choice-form__radio-check {
+  .program-choice-form__program-label > input:checked + span::after {
     width: 18px;
     height: 18px;
-    border-radius: 50%;
 
-    background-color: @primary-color;
-
-    position: absolute;
     top: 12px;
     left: 12px;
   }
@@ -426,26 +452,24 @@
   }
 
   .program-choice-form__additional legend {
-    margin-bottom: 56px;
+    margin-bottom: 57px;
   }
 
-  .program-choice-form__additional-item input[type="checkbox"] + .program-choice-form__checkbox {
+  .program-choice-form__additional-label > input + span::before {
     width: 40px;
     height: 40px;
-
-    margin-right: 14px;
   }
 
-  .program-choice-form__additional-item input[type="checkbox"]:checked ~ .program-choice-form__check {
+  .program-choice-form__additional-label > input:checked + span::after {
     left: 11px;
-    top: 8px;
+    top: 11px;
   }
 
   .program-choice-form__button {
     width: 45%;
 
     padding: 16px 10px;
-    margin-top: 25px;
+    margin-top: 24px;
 
     display: inline-block;
     vertical-align: middle;
@@ -465,9 +489,7 @@
     font-size: 16px;
   }
 
-  .program-choice-form input[type="text"],
-  .program-choice-form input[type="email"],
-  .program-choice-form input[type="tel"] {
+  .program-choice-form__input {
     height: 52px;
   }
 
@@ -564,7 +586,7 @@
   .program-choice-form__button {
     width: 46.5%;
 
-    margin-top: 31px;
+    margin-top: 28px;
     margin-right: 78px;
   }
 
