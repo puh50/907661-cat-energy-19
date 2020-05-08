@@ -79,16 +79,21 @@ gulp.task("clean", function () {
   return del("build");
 });
 
+gulp.task("refresh", function(done) {
+  server.reload();
+  done();
+});
+
 gulp.task("server", function () {
   server.init({
-    server: "source/",
+    server: "build/",
     notify: false,
     open: true,
     cors: true,
     ui: false
   });
 
-  gulp.watch("source/less/**/*.less", gulp.series("css"));
+  gulp.watch("source/less/**/*.less", gulp.series("css", "refresh"));
   gulp.watch("source/*.html").on("change", server.reload);
   gulp.watch("source/img/**/*.{png,jpg}", gulp.series("webp"));
   gulp.watch("source/img/**/*.{png,jpg,svg}", gulp.series("images"));

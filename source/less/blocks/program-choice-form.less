@@ -36,8 +36,7 @@
 .program-choice-form__input {
   height: 45px;
 
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 12px 15px;
 
   border: 1px solid rgba(205, 205, 205, 0.5);
 
@@ -58,8 +57,8 @@
   border: 2px solid #ff8282;
 }
 
-.program-choice-form input::-webkit-input-placeholder,
-.program-choice-form textarea::-webkit-input-placeholder { /* Edge */
+.program-choice-form__input::-webkit-input-placeholder, /* Edge */
+.program-choice-form textarea::-webkit-input-placeholder {
   font-size: 16px;
   line-height: 18px;
 
@@ -68,20 +67,29 @@
   text-transform: uppercase;
 }
 
-.program-choice-form input:-ms-input-placeholder,
+.program-choice-form__input::-moz-placeholder,
+.program-choice-form textarea::-moz-placeholder {
+  opacity: 1;
+}
+
+.program-choice-form__input:-ms-input-placeholder,
 .program-choice-form textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
   font-size: 16px;
   line-height: 18px;
 
   color: @third-text-color;
+
+  text-transform: uppercase;
 }
 
-.program-choice-form input::placeholder,
+.program-choice-form__input::placeholder,
 .program-choice-form textarea::placeholder {
   font-size: 16px;
   line-height: 18px;
 
   color: @third-text-color;
+
+  text-transform: uppercase;
 }
 
 // Pet-data
@@ -368,6 +376,34 @@
     margin-bottom: 51px;
   }
 
+  .program-choice-form__input {
+    height: 52px;
+
+    padding: 15px;
+  }
+
+  .program-choice-form__input::-webkit-input-placeholder, /* Edge */
+  .program-choice-form__input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .program-choice-form textarea::-webkit-input-placeholder, /* Edge */
+  .program-choice-form textarea:-ms-input-placeholder {  /* Internet Explorer 10-11 */
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .program-choice-form__input::placeholder {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .program-choice-form textarea::placeholder {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   .program-choice-form__pet-data-item {
     margin-bottom: 20px;
   }
@@ -487,40 +523,6 @@
     vertical-align: middle;
 
     font-size: 16px;
-  }
-
-  .program-choice-form__input {
-    height: 52px;
-  }
-
-  .program-choice-form input::-webkit-input-placeholder { /* Edge */
-    font-size: 20px;
-    line-height: 20px;
-  }
-
-  .program-choice-form textarea::-webkit-input-placeholder { /* Edge */
-    font-size: 20px;
-    line-height: 30px;
-  }
-
-  .program-choice-form input:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    font-size: 20px;
-    line-height: 20px;
-  }
-
-  .program-choice-form textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    font-size: 20px;
-    line-height: 30px;
-  }
-
-  .program-choice-form input::placeholder {
-    font-size: 20px;
-    line-height: 20px;
-  }
-
-  .program-choice-form textarea::placeholder {
-    font-size: 20px;
-    line-height: 30px;
   }
 }
 
