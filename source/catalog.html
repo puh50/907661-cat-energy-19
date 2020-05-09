@@ -5,15 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Кэт энерджи - каталог</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <script>
     // Picture element HTML5 shiv
     document.createElement("picture");
   </script>
-  <script src="js/picturefill.js" async></script>
+  <script src="js/picturefill.min.js" async=""></script>
 </head>
 
 <body>
+
+  <div style="display: none;">
+    <include src="build/img/sprite.svg"></include>
+  </div>
 
   <div class="page-wrapper">
 
@@ -29,10 +33,10 @@
         </a>
         <button type="button" class="menu-button page-header__menu-button menu-button--nojs">
           <svg class="menu-button__burger" width="25" height="19">
-            <use xlink:href="img/sprite.svg#menu-burger"></use>
+            <use xlink:href="#icon-menu-mobile"></use>
           </svg>
           <svg class="menu-button__close" width="19" height="19">
-            <use xlink:href="img/sprite.svg#menu-close"></use>
+            <use xlink:href="#icon-menu-close"></use>
           </svg>
         </button>
       </div>
@@ -64,19 +68,13 @@
             <div class="catalog__item-wrapper">
               <a href="#" class="catalog__link-image">
                 <picture>
-                  <source type="image/webp" media="(min-width: 1300px)"
-                    srcset="img/chicken-small-desktop@1x.webp 1x, img/chicken-small-desktop@1x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)"
-                    srcset="img/chicken-small-tablet@1x.webp 1x, img/chicken-small-tablet@1x.webp 2x">
-                  <source type="image/webp"
-                    srcset="img/chicken-small-mobile@1x.webp 1x, img/chicken-small-mobile@1x.webp 2x">
+                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/chicken-small-desktop@1x.webp 1x, img/chicken-small-desktop@1x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/chicken-small-tablet@1x.webp 1x, img/chicken-small-tablet@1x.webp 2x">
+                  <source type="image/webp" srcset="img/chicken-small-mobile@1x.webp 1x, img/chicken-small-mobile@1x.webp 2x">
 
-                  <source media="(min-width: 1300px)"
-                    srcset="img/chicken-small-desktop@1x.png 1x, img/chicken-small-desktop@2x.png 2x">
-                  <source media="(min-width: 768px)"
-                    srcset="img/chicken-small-tablet@1x.png 1x, img/chicken-small-tablet@2x.png 2x">
-                  <img src="img/chicken-small-mobile@1x.jpg" width="140" height="144" srcset="img/chicken-small-mobile@2x.jpg 2x"
-                    alt="Банка корма" class="catalog__image">
+                  <source media="(min-width: 1300px)" srcset="img/chicken-small-desktop@1x.png 1x, img/chicken-small-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/chicken-small-tablet@1x.png 1x, img/chicken-small-tablet@2x.png 2x">
+                  <img src="img/chicken-small-mobile@1x.jpg" width="140" height="144" srcset="img/chicken-small-mobile@2x.jpg 2x" alt="Банка корма" class="catalog__image">
                 </picture>
               </a>
               <div class="catalog__text">
@@ -103,19 +101,13 @@
             <div class="catalog__item-wrapper">
               <a href="#" class="catalog__link-image">
                 <picture>
-                  <source type="image/webp" media="(min-width: 1300px)"
-                    srcset="img/chicken-big-desktop@1x.webp 1x, img/chicken-big-desktop@1x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)"
-                    srcset="img/chicken-big-tablet@1x.webp 1x, img/chicken-big-tablet@1x.webp 2x">
-                  <source type="image/webp"
-                    srcset="img/chicken-big-mobile@1x.webp 1x, img/chicken-big-mobile@1x.webp 2x">
+                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/chicken-big-desktop@1x.webp 1x, img/chicken-big-desktop@1x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/chicken-big-tablet@1x.webp 1x, img/chicken-big-tablet@1x.webp 2x">
+                  <source type="image/webp" srcset="img/chicken-big-mobile@1x.webp 1x, img/chicken-big-mobile@1x.webp 2x">
 
-                  <source media="(min-width: 1300px)"
-                    srcset="img/chicken-big-desktop@1x.png 1x, img/chicken-big-desktop@2x.png 2x">
-                  <source media="(min-width: 768px)"
-                    srcset="img/chicken-big-tablet@1x.png 1x, img/chicken-big-tablet@2x.png 2x">
-                  <img src="img/chicken-big-mobile@1x.jpg" width="140" height="144" srcset="img/chicken-big-mobile@2x.jpg 2x" alt="Банка корма"
-                    class="catalog__image catalog__image--big">
+                  <source media="(min-width: 1300px)" srcset="img/chicken-big-desktop@1x.png 1x, img/chicken-big-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/chicken-big-tablet@1x.png 1x, img/chicken-big-tablet@2x.png 2x">
+                  <img src="img/chicken-big-mobile@1x.jpg" width="140" height="144" srcset="img/chicken-big-mobile@2x.jpg 2x" alt="Банка корма" class="catalog__image catalog__image--big">
                 </picture>
               </a>
               <div class="catalog__text">
@@ -142,18 +134,13 @@
             <div class="catalog__item-wrapper">
               <a href="#" class="catalog__link-image">
                 <picture>
-                  <source type="image/webp" media="(min-width: 1300px)"
-                    srcset="img/fish-small-desktop@1x.webp 1x, img/fish-small-desktop@1x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)"
-                    srcset="img/fish-small-tablet@1x.webp 1x, img/fish-small-tablet@1x.webp 2x">
+                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/fish-small-desktop@1x.webp 1x, img/fish-small-desktop@1x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/fish-small-tablet@1x.webp 1x, img/fish-small-tablet@1x.webp 2x">
                   <source type="image/webp" srcset="img/fish-small-mobile@1x.webp 1x, img/fish-small-mobile@1x.webp 2x">
 
-                  <source media="(min-width: 1300px)"
-                    srcset="img/fish-small-desktop@1x.png 1x, img/fish-small-desktop@2x.png 2x">
-                  <source media="(min-width: 768px)"
-                    srcset="img/fish-small-tablet@1x.png 1x, img/fish-small-tablet@2x.png 2x">
-                  <img src="img/fish-small-mobile@1x.jpg" width="140" height="144" srcset="img/fish-small-mobile@2x.jpg 2x" alt="Банка корма"
-                    class="catalog__image">
+                  <source media="(min-width: 1300px)" srcset="img/fish-small-desktop@1x.png 1x, img/fish-small-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/fish-small-tablet@1x.png 1x, img/fish-small-tablet@2x.png 2x">
+                  <img src="img/fish-small-mobile@1x.jpg" width="140" height="144" srcset="img/fish-small-mobile@2x.jpg 2x" alt="Банка корма" class="catalog__image">
                 </picture>
               </a>
               <div class="catalog__text">
@@ -180,18 +167,13 @@
             <div class="catalog__item-wrapper">
               <a href="#" class="catalog__link-image">
                 <picture>
-                  <source type="image/webp" media="(min-width: 1300px)"
-                    srcset="img/fish-big-desktop@1x.webp 1x, img/fish-big-desktop@1x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)"
-                    srcset="img/fish-big-tablet@1x.webp 1x, img/fish-big-tablet@1x.webp 2x">
+                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/fish-big-desktop@1x.webp 1x, img/fish-big-desktop@1x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/fish-big-tablet@1x.webp 1x, img/fish-big-tablet@1x.webp 2x">
                   <source type="image/webp" srcset="img/fish-big-mobile@1x.webp 1x, img/fish-big-mobile@1x.webp 2x">
 
-                  <source media="(min-width: 1300px)"
-                    srcset="img/fish-big-desktop@1x.png 1x, img/fish-big-desktop@2x.png 2x">
-                  <source media="(min-width: 768px)"
-                    srcset="img/fish-big-tablet@1x.png 1x, img/fish-big-tablet@2x.png 2x">
-                  <img src="img/fish-big-mobile@1x.jpg" width="140" height="144" srcset="img/fish-big-mobile@2x.jpg 2x" alt="Банка корма"
-                    class="catalog__image catalog__image--big">
+                  <source media="(min-width: 1300px)" srcset="img/fish-big-desktop@1x.png 1x, img/fish-big-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/fish-big-tablet@1x.png 1x, img/fish-big-tablet@2x.png 2x">
+                  <img src="img/fish-big-mobile@1x.jpg" width="140" height="144" srcset="img/fish-big-mobile@2x.jpg 2x" alt="Банка корма" class="catalog__image catalog__image--big">
                 </picture>
               </a>
               <div class="catalog__text">
@@ -218,19 +200,13 @@
             <div class="catalog__item-wrapper">
               <a href="#" class="catalog__link-image">
                 <picture>
-                  <source type="image/webp" media="(min-width: 1300px)"
-                    srcset="img/buckwheat-small-desktop@1x.webp 1x, img/buckwheat-small-desktop@1x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)"
-                    srcset="img/buckwheat-small-tablet@1x.webp 1x, img/buckwheat-small-tablet@1x.webp 2x">
-                  <source type="image/webp"
-                    srcset="img/buckwheat-small-mobile@1x.webp 1x, img/buckwheat-small-mobile@1x.webp 2x">
+                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/buckwheat-small-desktop@1x.webp 1x, img/buckwheat-small-desktop@1x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/buckwheat-small-tablet@1x.webp 1x, img/buckwheat-small-tablet@1x.webp 2x">
+                  <source type="image/webp" srcset="img/buckwheat-small-mobile@1x.webp 1x, img/buckwheat-small-mobile@1x.webp 2x">
 
-                  <source media="(min-width: 1300px)"
-                    srcset="img/buckwheat-small-desktop@1x.png 1x, img/buckwheat-small-desktop@2x.png 2x">
-                  <source media="(min-width: 768px)"
-                    srcset="img/buckwheat-small-tablet@1x.png 1x, img/buckwheat-small-tablet@2x.png 2x">
-                  <img src="img/buckwheat-small-mobile@1x.jpg" width="140" height="144" srcset="img/buckwheat-small-mobile@2x.jpg 2x"
-                    alt="Банка корма" class="catalog__image">
+                  <source media="(min-width: 1300px)" srcset="img/buckwheat-small-desktop@1x.png 1x, img/buckwheat-small-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/buckwheat-small-tablet@1x.png 1x, img/buckwheat-small-tablet@2x.png 2x">
+                  <img src="img/buckwheat-small-mobile@1x.jpg" width="140" height="144" srcset="img/buckwheat-small-mobile@2x.jpg 2x" alt="Банка корма" class="catalog__image">
                 </picture>
               </a>
               <div class="catalog__text">
@@ -257,19 +233,13 @@
             <div class="catalog__item-wrapper">
               <a href="#" class="catalog__link-image">
                 <picture>
-                  <source type="image/webp" media="(min-width: 1300px)"
-                    srcset="img/buckwheat-big-desktop@1x.webp 1x, img/buckwheat-big-desktop@1x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)"
-                    srcset="img/buckwheat-big-tablet@1x.webp 1x, img/buckwheat-big-tablet@1x.webp 2x">
-                  <source type="image/webp"
-                    srcset="img/buckwheat-big-mobile@1x.webp 1x, img/buckwheat-big-mobile@1x.webp 2x">
+                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/buckwheat-big-desktop@1x.webp 1x, img/buckwheat-big-desktop@1x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/buckwheat-big-tablet@1x.webp 1x, img/buckwheat-big-tablet@1x.webp 2x">
+                  <source type="image/webp" srcset="img/buckwheat-big-mobile@1x.webp 1x, img/buckwheat-big-mobile@1x.webp 2x">
 
-                  <source media="(min-width: 1300px)"
-                    srcset="img/buckwheat-big-desktop@1x.png 1x, img/buckwheat-big-desktop@2x.png 2x">
-                  <source media="(min-width: 768px)"
-                    srcset="img/buckwheat-big-tablet@1x.png 1x, img/buckwheat-big-tablet@2x.png 2x">
-                  <img src="img/buckwheat-big-mobile@1x.jpg" width="140" height="144" srcset="img/buckwheat-big-mobile@2x.jpg 2x"
-                    alt="Банка корма" class="catalog__image catalog__image--big">
+                  <source media="(min-width: 1300px)" srcset="img/buckwheat-big-desktop@1x.png 1x, img/buckwheat-big-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/buckwheat-big-tablet@1x.png 1x, img/buckwheat-big-tablet@2x.png 2x">
+                  <img src="img/buckwheat-big-mobile@1x.jpg" width="140" height="144" srcset="img/buckwheat-big-mobile@2x.jpg 2x" alt="Банка корма" class="catalog__image catalog__image--big">
                 </picture>
               </a>
               <div class="catalog__text">
@@ -296,18 +266,13 @@
             <div class="catalog__item-wrapper">
               <a href="#" class="catalog__link-image">
                 <picture>
-                  <source type="image/webp" media="(min-width: 1300px)"
-                    srcset="img/rice-small-desktop@1x.webp 1x, img/rice-small-desktop@1x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)"
-                    srcset="img/rice-small-tablet@1x.webp 1x, img/rice-small-tablet@1x.webp 2x">
+                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/rice-small-desktop@1x.webp 1x, img/rice-small-desktop@1x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/rice-small-tablet@1x.webp 1x, img/rice-small-tablet@1x.webp 2x">
                   <source type="image/webp" srcset="img/rice-small-mobile@1x.webp 1x, img/rice-small-mobile@1x.webp 2x">
 
-                  <source media="(min-width: 1300px)"
-                    srcset="img/rice-small-desktop@1x.png, img/rice-small-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)"
-                    srcset="img/rice-small-tablet@1x.png 1x, img/rice-small-tablet@2x.jpg 2x">
-                  <img src="img/rice-small-mobile@1x.jpg" width="140" height="144" srcset="img/rice-small-mobile@2x.jpg 2x" alt="Банка корма"
-                    class="catalog__image">
+                  <source media="(min-width: 1300px)" srcset="img/rice-small-desktop@1x.png, img/rice-small-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/rice-small-tablet@1x.png 1x, img/rice-small-tablet@2x.jpg 2x">
+                  <img src="img/rice-small-mobile@1x.jpg" width="140" height="144" srcset="img/rice-small-mobile@2x.jpg 2x" alt="Банка корма" class="catalog__image">
                 </picture>
               </a>
               <div class="catalog__text">
@@ -333,10 +298,10 @@
           <li class="catalog__item item-adding">
             <span class="item-adding__plus">
               <svg class="item-adding__plus-small" width="30" height="30">
-                <use xlink:href="img/sprite.svg#plus-small"></use>
+                <use xlink:href="#icon-plus-mobile"></use>
               </svg>
               <svg class="item-adding__plus-large" width="60" height="60">
-                <use xlink:href="img/sprite.svg#plus-large"></use>
+                <use xlink:href="#icon-plus"></use>
               </svg>
             </span>
             <p class="item-adding__show-text">Показать еще 100500 товаров</p>
@@ -405,22 +370,17 @@
           <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></p>
         </div>
         <div class="contacts__map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20Russia%2C%20191186!5e0!3m2!1sen!2sby!4v1588416878834!5m2!1sen!2sby"
-            style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20Russia%2C%20191186!5e0!3m2!1sen!2sby!4v1588416878834!5m2!1sen!2sby" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
           </iframe>
           <img src="img/map-pin.png" alt="Указатель местоположения" width="55" height="53" class="contacts__pin-map">
           <picture>
-            <source type="image/webp" media="(min-width: 1300px)"
-              srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)"
-              srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
 
             <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
-            <img src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" class="contacts__map-image"
-              alt="Мы находимся: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+            <img src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" class="contacts__map-image" alt="Мы находимся: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
           </picture>
         </div>
       </section>
@@ -437,21 +397,21 @@
               <li class="social__item">
                 <a href="#" class="social__link social__link--vkontakte">
                   <svg width="22" height="12">
-                    <use xlink:href="img/sprite.svg#social-vkontakte"></use>
+                    <use xlink:href="#icon-vk"></use>
                   </svg>
                 </a>
               </li>
               <li class="social__item">
                 <a href="#" class="social__link social__link--instagram">
                   <svg width="17" height="17">
-                    <use xlink:href="img/sprite.svg#social-instagram"></use>
+                    <use xlink:href="#icon-insta"></use>
                   </svg>
                 </a>
               </li>
               <li class="social__item">
                 <a href="#" class="social__link social__link--facebook">
                   <svg width="10" height="19">
-                    <use xlink:href="img/sprite.svg#social-facebook"></use>
+                    <use xlink:href="#icon-fb"></use>
                   </svg>
                 </a>
               </li>
@@ -461,7 +421,7 @@
             <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">
               <span class="copyright__text">HTML Academy</span>
               <svg width="27" height="34">
-                <use xlink:href="img/sprite.svg#copyright"></use>
+                <use xlink:href="#icon-htmlacademy"></use>
               </svg>
             </a>
           </div>
@@ -472,11 +432,7 @@
 
   </div>
 
-  <script src="js/main-menu.js"></script>
-  <script src="js/svg4everybody.min.js"></script>
-  <script>
-    svg4everybody(); // run it now or whenever you are ready
-  </script>
+  <script src="js/main-menu.min.js"></script>
 </body>
 
 </html>
