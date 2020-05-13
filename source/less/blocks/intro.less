@@ -14,7 +14,7 @@
 .intro__block-above {
   position: relative;
 
-  padding: 0 20px 61px 20px;
+  padding: 0  0 61px 0;
   margin-top: -278px;
 }
 
@@ -49,11 +49,10 @@
   width: 280px;
 
   margin-bottom: 23px;
-  margin-left: 20px;
 
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: -60px;
+  left: 20px;
 
   font-size: 14px;
   line-height: 18px;
@@ -126,11 +125,11 @@
   .intro__background-block {
     display: block;
 
-    min-width: 650px;
+    width: 50%;
     min-height: 696px;
 
     background-image: url("../img/index-background-desktop@1x.jpg");
-
+    background-position: left;
     order: 2;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -139,6 +138,8 @@
   }
 
   .intro__block-above {
+    width: 50%;
+
     padding: 150px 0 0 0;
   }
 
@@ -159,7 +160,7 @@
   .intro__image {
     position: absolute;
     right: -391px;
-    top: 223px;
+    top: 0;
 
     z-index: 0;
   }

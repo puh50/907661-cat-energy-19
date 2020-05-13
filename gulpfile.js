@@ -22,9 +22,14 @@ gulp.task("css", function () {
   .pipe(sourcemaps.init())
   .pipe(less())
   .pipe(postcss([ autoprefixer() ]))
+  .pipe(sourcemaps.write(".")) // "." means write in this directory
+  .pipe(gulp.dest("build/css"));
+});
+
+gulp.task("cssmin", function () {
+  return gulp.src("build/css/style.css")
   .pipe(csso())
   .pipe(rename("style.min.css"))
-  .pipe(sourcemaps.write(".")) // "." means write in this directory
   .pipe(gulp.dest("build/css"));
 });
 
@@ -93,11 +98,11 @@ gulp.task("server", function () {
     ui: false
   });
 
-  gulp.watch("source/less/**/*.less", gulp.series("css", "refresh"));
+  gulp.watch("source/less/**/*.less", gulp.series("css", "cssmin", "refresh"));
   gulp.watch("source/*.html").on("change", server.reload);
   gulp.watch("source/img/**/*.{png,jpg}", gulp.series("webp"));
   gulp.watch("source/img/**/*.{png,jpg,svg}", gulp.series("images"));
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"))
+gulp.task("build", gulp.series("clean", "copy", "css", "cssmin", "sprite", "html", "refresh"))
 gulp.task("start", gulp.series("build", "server"));

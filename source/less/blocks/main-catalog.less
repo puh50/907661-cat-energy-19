@@ -1,5 +1,9 @@
 .main-catalog__title {
-  margin: 15px 0 28px 20px;
+  max-width: @mobile-width;
+  box-sizing: border-box;
+
+  padding: 0 20px;
+  margin: 15px auto 28px auto;
 
   font-size: 36px;
   line-height: 60px;
@@ -7,7 +11,10 @@
 
 @media (min-width: @tablet-width) {
   .main-catalog__title {
-    margin: 46px 0 26px 30px;
+    max-width: @tablet-width;
+
+    padding: 0 30px;
+    margin: 46px auto 26px auto;
 
     font-size: 60px;
   }
@@ -15,6 +22,9 @@
 
 @media (min-width: @desktop-width) {
   .main-catalog__title {
-    margin: 61px 0 26px 40px;
+    max-width: @desktop-width;
+
+    padding: 0 40px;
+    margin: 61px auto 26px auto;
   }
 }

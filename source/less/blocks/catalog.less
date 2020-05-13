@@ -137,10 +137,17 @@
 @media (min-width: @desktop-width) {
   .catalog__list {
     padding: 0 40px;
+
+    justify-content: flex-start;
   }
 
   .catalog__item {
     width: 245px;
+    margin-right: 74px; // for IE 11 for others 80px
+  }
+
+  .catalog__item:nth-child(4n + 4) {
+    margin-right: 0;
   }
 
   .catalog__image {

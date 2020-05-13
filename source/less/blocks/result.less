@@ -15,7 +15,7 @@
 .result__image-after {
   position: absolute;
   top: -12px;
-  left: 0;
+  left: calc(50% - 320px / 2);
 }
 
 .result__image-before--no-display {
@@ -70,9 +70,8 @@
 
 @media (min-width: @tablet-width) {
   .result {
-    height: 461px;
-
-    padding: 0;
+    padding-top: 0px;
+    padding-bottom: 68px;
   }
 
   .result__image {
@@ -91,7 +90,7 @@
     height: 517px;
 
     top: -170px;
-    left: 46px;
+    left: calc(50% - 680px / 2);
   }
 
   .result__slider {
@@ -124,7 +123,7 @@
   .result__image-before,
   .result__image-after {
     top: -190px;
-    left: 30px;
+    left: calc((50% - 680px/2) + 10px);
   }
 
   .result__slider {
