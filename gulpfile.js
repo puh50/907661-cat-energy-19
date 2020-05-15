@@ -19,17 +19,17 @@ var server = require("browser-sync").create();
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
   .pipe(plumber())
-  .pipe(sourcemaps.init())
   .pipe(less())
   .pipe(postcss([ autoprefixer() ]))
-  .pipe(sourcemaps.write(".")) // "." means write in this directory
   .pipe(gulp.dest("build/css"));
 });
 
 gulp.task("cssmin", function () {
   return gulp.src("build/css/style.css")
+  .pipe(sourcemaps.init())
   .pipe(csso())
   .pipe(rename("style.min.css"))
+  .pipe(sourcemaps.write(".")) // "." means write in this directory
   .pipe(gulp.dest("build/css"));
 });
 
