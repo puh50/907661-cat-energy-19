@@ -99,7 +99,7 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/less/**/*.less", gulp.series("css", "cssmin", "refresh"));
-  gulp.watch("source/*.html").on("change", server.reload);
+  gulp.watch("source/*.html", gulp.series("html", "refresh"));
   gulp.watch("source/img/**/*.{png,jpg}", gulp.series("webp"));
   gulp.watch("source/img/**/*.{png,jpg,svg}", gulp.series("images"));
 });
